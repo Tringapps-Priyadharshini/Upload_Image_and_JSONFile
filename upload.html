@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="main_page.css">
+</head>
+
+<body>
+    <center>
+        <br><br><br>
+        <font face="times new roman" size="20" color="white"><b><i>UPLOAD YOUR DETAILS</i></b></font>
+
+    <table>
+        <tr>
+            <td><label for="photo">Upload Photo</label>
+                <input type="file" id="image" name="image" accept="image/*" onchange="pic(event)"><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="json file">Upload JSON file</label>
+                <input type="file" id="details" name="details" onchange="myfile(event)" accept=".json"><br><br></td>
+        </tr>
+        <tr>
+            <td><button onclick="details()">Submit</button></td>
+        </tr>
+    </table>   
+ </center>
+    <p id="demo"></p>
+
+    <script>
+        var url;
+
+        function pic(event) {
+            url = URL.createObjectURL(event.target.files[0]);
+            var pic = event;
+
+            var profile = document.getElementById('image');
+            profile.src = url;
+            var read = new FileReader();
+            read.addEventListener("load", () => {
+                localStorage["pic"] = read.result;
+            })
+            read.readAsDataURL(event.target.files[0]);
+        }
+
+        function myfile() {
+            var file_to_read = document.getElementById('details').files[0];
+            var read = new FileReader();
+            read.onload = function(e) {
+                var detail = e.target.result;
+                var intern = JSON.parse(detail);
+                // console.log(intern);
+                localStorage.setItem('details', JSON.stringify(intern));
+            };
+            read.readAsText(file_to_read);
+        } 
+
+        function details() {
+            confirm("Are you sure ");
+
+            location.assign("uploaddetails.html");
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="json.css">
+</head>
+
+<body bgcolor="#FFC300">
+    <center>
+        <font face="times new roman" size="20" color="red"><b><i>USER INFORMATION</i></b></font>
+
+    <div id="details">
+        <img id="image" width="130" style="border-radius:70px;margin-top: -15%;">
+        <br><br>
+        <pre align="left">  Name                    :  <span id="name"> </span></pre><br>
+        <pre align="left">  Age                     :  <span id="age"> </span></pre><br>
+        <pre align="left">  Address                 :  <span id="address"> </span></pre><br>
+        <pre align="left">  Gender                  :  <span id="gender"> </span></pre><br>
+
+    </div>
+</center>
+    <script>
+        var details = localStorage.getItem("details");
+        var mydetails = JSON.parse(details);
+        document.getElementById('name').innerHTML = mydetails['Name'];
+        document.getElementById('age').innerHTML = mydetails['Age'];
+        document.getElementById('address').innerHTML = mydetails['Address'];
+        document.getElementById('gender').innerHTML = mydetails['Gender'];
+
+        document.getElementById('image').src = localStorage['pic'];
+        localStorage.clear();
+    </script>
+</body>
+
+</html>
