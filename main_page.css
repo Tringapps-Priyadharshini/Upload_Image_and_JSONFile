@@ -28,3 +28,8 @@ button {
     font-weight: bold;
     border-color: rgb(245, 13, 13);
 }
+.head{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color:white;
+}
