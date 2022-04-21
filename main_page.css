@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -5,11 +6,12 @@
 table {
     padding: 10px;
     background-color: white;
-    margin-top: 100px;
     font-size: 20px;
     line-height: 30px;
     font-family: cursive, Times New Roman;
     border-radius: 5px;
+    margin-top:200px;
+    margin-left: 570px;
 }
 
 body {
@@ -29,7 +31,13 @@ button {
     border-color: rgb(245, 13, 13);
 }
 .head{
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     color:white;
+    margin-top:30px;
+}
+
+th{
+    font-weight: normal;
 }
