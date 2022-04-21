@@ -16,6 +16,7 @@ body {
     justify-content: center;
     height:100vh;
     flex-direction: column;
+    background-color:#FFC300;
 }
 .head{
     font-family: 'Times New Roman', Times, serif;
