@@ -10,15 +10,12 @@
 </head>
 
 <body>
-    <center>
-        <br><br><br>
-        <div class="head"><strong><em>UPLOAD YOUR DETAILS</em></strong></div>
-
+    <div class="head"><strong><em>UPLOAD YOUR DETAILS</em></strong></div>
     <table>
         <tr>
-            <td><label for="photo">Upload Photo</label>
+            <th><label for="photo">Upload Photo</label>
                 <input type="file" id="image" name="image" accept="image/*" onchange="pic(event)"><br><br>
-            </td>
+            </th>
         </tr>
         <tr>
             <td><label for="json file">Upload JSON file</label>
@@ -28,7 +25,6 @@
             <td><button onclick="details()">Submit</button></td>
         </tr>
     </table>   
- </center>
     <p id="demo"></p>
 
     <script>
@@ -67,5 +63,5 @@
         }
     </script>
 </body>
-
+    
 </html>
